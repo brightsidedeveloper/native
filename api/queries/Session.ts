@@ -1,7 +1,7 @@
 import { queryOptions } from '@tanstack/react-query'
 import supabase from '../Supabase'
 
-export default class Auth {
+export default class Session {
   static queryOptions = queryOptions({
     queryKey: ['session'],
     queryFn: async () => {

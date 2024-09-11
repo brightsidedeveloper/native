@@ -1,4 +1,4 @@
-import Auth from '@/api/queries/Auth'
+import Session from '@/api/queries/Session'
 import { useQuery } from '@tanstack/react-query'
 import { Slot, useRouter } from 'expo-router'
 import { useEffect } from 'react'
@@ -6,7 +6,7 @@ import { ActivityIndicator, View } from 'react-native'
 
 export default function Layout() {
   const router = useRouter()
-  const { data, isLoading } = useQuery(Auth.queryOptions)
+  const { data, isLoading } = useQuery(Session.queryOptions)
 
   useEffect(() => {
     if (!isLoading && !data) {
